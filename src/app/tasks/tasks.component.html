@@ -1,0 +1,12 @@
+
+
+    <div class="row container-fluid">
+        <div *ngIf="displaySingleTask" class="col-xl-9 col-lg-9 col-md-8 col-sm-12 col-xm-12">
+            <app-task-detail  (onSelection)="showId($event)" (onDelete)="deleteById($event)" (onPost)="postTaskToArr($event)" [task]="displaySingleTask" (onFormHandler)="showFormStatus($event)" [formStatus]="formStatus"  ></app-task-detail>
+        </div>
+        <div *ngIf ="tasks" class="col-xl-3 col-lg-3 col-md-4 col-sm-12 col-xm-12">
+            <app-task-list [idToFocus]="idToFocus"  (onItemSelected)="showItem($event)" (onFormHandler)="showFormStatus($event)" [formStatus]="formStatus"   [tasks]="tasks"></app-task-list>
+        </div>
+    </div>
+
+{{bodyOfPosted}}

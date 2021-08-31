@@ -1,0 +1,10 @@
+
+<ul>     
+    <button (click)="formHandler()"  class="mb-2">+ Add new task</button>
+    <li  tabindex="0"   *ngFor="let task of tasks">
+        <a (click)="showId(task._id)" [ngClass]="{'selected':task.selected===true}"  class="nav-link">
+            <small>•</small> {{task.task}}
+        </a>
+    </li>
+    
+</ul>

@@ -1,0 +1,186 @@
+.jumbootron{
+    margin-top: 2rem;
+    text-align: center;
+    box-shadow: 1px 1px 3px rgb(175, 175, 175);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.info_section{
+    margin-top: 2rem;;
+
+}
+h2{
+    margin-left: 1.2rem;
+}
+.btn{
+    float: right;
+    
+}
+
+.form_textarea{
+        box-shadow: none;
+        width: 100%;
+        outline: none;
+        padding: 0.35rem;
+        font-size: 1.25rem;
+        border-radius: 0.25rem;
+        border: rgb(221, 219, 219) 1px solid;
+        transition: 0.3s;
+}
+.form_info{
+    text-align: center;
+}
+.form_textarea:focus{
+    border: 1px solid rgb(13, 209, 235);
+    box-shadow: 1px 1px 3px  rgb(13, 209, 235) ;
+}
+.form_input:focus{
+    border: 1px solid rgb(13, 209, 235);
+    box-shadow: 1px 1px 3px  rgb(13, 209, 235) ;
+}
+
+.form_input{
+
+    box-shadow: none;
+    outline: none;
+    padding: 0.35rem;
+    font-size: 1.25rem;
+    border-radius: 0.25rem;
+    border: rgb(221, 219, 219) 1px solid;
+    transition: 0.3s;
+
+}
+
+.form_item {
+    display: block;    
+    height: fit-content;
+    margin-right: auto;
+    margin-left: auto;
+}
+.subform_item{
+    display: inline-block;
+}
+
+.submit_btn {
+    width: 100%;
+    outline: none;
+    background: rgba(15, 107, 19, 0.774);
+    color: white;
+    font-size: 1.25rem;
+    border-radius: 0.25rem;
+    border: none; 
+    transition: 0.3s;  
+}
+.submit_btn:hover{
+    background: rgba(32, 204, 40, 0.89); ;
+    
+}
+.submit_btn:active{
+    background:white;
+    color:rgba(32, 204, 40, 0.89);
+}
+.back_btn {
+    width: 100%;
+    outline: none;
+    background: rgba(15, 47, 107, 0.774);
+    color: white;
+    font-size: 1.25rem;
+    border-radius: 0.25rem;
+    border: none; 
+    transition: 0.3s;  
+}
+.static_content{
+    position: relative;
+}
+
+.back_btn:active{
+    background:white;
+    color:rgba(32, 141, 204, 0.89);
+}
+.inline_back_btn {    
+    outline: none;
+    background: rgba(15, 47, 107, 0.774);
+    color: white;
+    font-size: 1.25rem;
+    border-radius: 0.25rem;
+    border: none; 
+    transition: 0.3s;  
+}
+.inline_back_btn:hover{
+    background-color:rgba(32, 141, 204, 0.89);
+}
+
+.inline_back_btn:active{
+    background:white;
+    color:rgba(32, 141, 204, 0.89);
+}
+.inline_remove_btn {    
+    outline: none;
+    background: rgba(146, 15, 5, 0.774);
+    color: white;
+    font-size: 1.25rem;
+    border-radius: 0.25rem;
+    border: none; 
+    transition: 0.3s;  
+}
+.inline_remove_btn:hover{
+    background:rgba(223, 52, 29, 0.925);
+  
+}
+
+.inline_remove_btn:active{
+    background:white;
+    color:rgba(223, 52, 29, 0.925);
+}
+
+button{
+    transition: 0.3s;
+}
+.button_container{
+    text-align: right;   
+    overflow: auto;
+    
+}
+.fixed_content{
+    position: relative;
+}
+.checkmark{
+    position: fixed;
+    top:20% ;
+    width: 20%;
+    opacity: 0.8;   
+    height: auto;
+    left: 40%;
+    transition: 0.3s;    
+    visibility: hidden;
+    animation: showSucces 1.0s linear;  
+    z-index: 5;  
+}
+
+@keyframes showSucces {
+    0% {
+        visibility: visible;
+        width: 20%;        
+    }
+    25% {
+        width: 25%;
+        left: 37.5%;
+    }
+    50% {
+        width: 30%;
+        left: 35.0%;
+    }
+    75% {
+        width: 25%;
+        left: 37.5%;
+
+    }
+    100% {
+        width: 20%;
+        left: 40%;
+        visibility: hidden;
+    }
+  }
+
+
+

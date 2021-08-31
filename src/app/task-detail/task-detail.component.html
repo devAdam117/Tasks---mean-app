@@ -1,0 +1,57 @@
+
+<div (window:resize)="onResize($event)" class="jumbootron row " [ngClass]="{'jumbootron':isDisplayed  }"> 
+    <img [style.width]="imgWidthOnResize" *ngIf="showError" src="/assets/errormark.png" alt="error" class="checkmark">
+    <img *ngIf="showSuccess" src="/assets/checkmark.png" class="checkmark" alt="check">
+    <div  *ngIf="editDisplay===false && formStatus===false && isDisplayed===true " class="fixed_content  col-12">        
+        <div class="form_item button_container mb-2">
+            
+            <button #editBtn class="inline_back_btn  mr-1" (click)="editTask()">{{stateOfBtn}}</button> 
+            <button (click)="removeTask()" class="inline_remove_btn">Remove</button>
+        </div>
+        <div class="form_item form_info">
+            <h2 (click)="editTask()" >{{task.task}}</h2>
+            <p (click)="editTask()">{{task.description}}</p>
+        <p>{{task.date | date:'d MMM , y, HH:mm:ss '}}</p> 
+        </div> 
+        
+        
+
+    </div> 
+
+    <div  *ngIf="editDisplay===true && formStatus===false && isDisplayed===true " class="static_content col-12">        
+        <div class="form_item button_container mb-2">        
+            <button #editBtn class="inline_back_btn mr-1" (click)="editTask()">{{stateOfBtn}}</button> 
+            <button (click)="removeTask()" class="inline_remove_btn">Remove</button>
+        </div>
+        <input class="form_input form_item mt-2" type="text" [(ngModel)]="task.task" name="task">
+        <div class="info_section form_item">        
+            <textarea class="form_textarea"  cols="30" rows="10" [(ngModel)]="task.description"></textarea>  
+            <p>{{task.date | date:'d MMM , y, HH:mm:ss '}}</p>    
+        </div>  
+        <div class="form_item mt-1 row">
+            <div class="offset-lg-3 col-lg-6 col-xm-12">
+                <button (click)="update()" class="submit_btn">Save</button> 
+            </div> 
+        </div>
+    </div>
+           
+
+
+    <form #addForm="ngForm" (ngSubmit)="onSubmit(addForm)" class="col-12" *ngIf=formStatus>
+        <div class="form_item form_info">
+            <h1>Add new task!</h1> 
+        </div>   
+        <input class="form_item form_input mt-2" name="task" ngModel type="text" placeholder="Task name">
+        <textarea class="form_item mt-2 form_textarea" name="description" ngModel  cols="30" rows="10" placeholder="Description..."></textarea>
+        <div class="form_item mt-1 row">
+            <div class="offset-lg-3 col-lg-6 col-xm-12">
+                <button class="subform_item submit_btn" type="submit" >Save</button>
+            </div>
+            <div class="offset-lg-3 col-lg-6 col-xm-12">
+                <button class="offset-lg-3 col-lg-6 col-xm-12 subform_item" class="back_btn"  (click)="formHandler()">Back</button>       
+            </div>
+        </div>
+    </form>
+
+</div>
+
