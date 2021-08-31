@@ -1,4 +1,4 @@
-![github](https://user-images.githubusercontent.com/78803735/131566238-53d674f1-0255-4703-a238-d9cce46ec5d0.jpg)
+
 # Task list
 simple mean app using most common http calls
 
@@ -9,6 +9,7 @@ simple mean app using most common http calls
 - add task with or without description
 - update task or description of it
 - remove task
+- all functionalities are displayed instantly on client side
 
 
 ## Start
@@ -19,4 +20,6 @@ simple mean app using most common http calls
 
 
 
-
+| home  | tasks | tasks -add new task| tasks- post(method) |tasks- update existing task| task- put(method) |tasks- remove existing task | tasks- remove(method)|
+| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
+| Content Cell  | Content Cell  | Content Cell  | Content Cell  | Content Cell  | Content Cell  | Content Cell  | Content Cell  |
